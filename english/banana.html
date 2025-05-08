@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Tab</title>
+      <meta name="990307346a802b31ebca359cf92b73af820e63c0" content="990307346a802b31ebca359cf92b73af820e63c0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/newtab.png" />
+  <link rel="shortcut icon" href="/newtab.png" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+              if (!localStorage.getItem('alertShown')) {
+                  alert("if your in lausd or something like that (a person reached out to me) make sure to switch to LAUSD internet, not charter");
+  
+                  localStorage.setItem('alertShown', 'true');
+              }
+          })
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQ8CVXYBF9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-TQ8CVXYBF9');
+  </script>
+  <style>
+    .iframe {
+      float: center;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+
+    .fullscreen {
+      font-size: 20;
+      border-radius: 8px;
+      border: none;
+      color: var(--txtcolor);
+      font-size: 30px;
+      justify-content: space-between;
+    }
+
+    .rec {
+      font-size: 20;
+      border-radius: 8px;
+      border: none;
+      color: var(--txtcolor);
+      font-size: 30px;
+      justify-content: space-between;
+    }
+
+    .reload {
+      font-size: 20;
+      border-radius: 8px;
+      border: none;
+      color: var(--txtcolor);
+      font-size: 30px;
+      justify-content: space-between;
+    }
+
+    .reload:hover {
+      transform: rotate(-360deg);
+    }
+
+    body {
+      background-color: var(--bgcolor);
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 1rem;
+      left: -4%;
+      background-color: yellow;
+      color: black;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: 0.7s ease;
+    }
+
+    .back-button:hover {
+      background-color: gray;
+      left: 1rem;
+    }
+
+
+    #game-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 660px;
+      background:transparent;
+    }
+
+    #game-container iframe {
+      border: none;
+      float: center;
+      width: 100%;
+      height: 100%;
+      height: 90vh;
+      width: 100vw;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    #server-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #server-buttons a {
+      display: block;
+      position: relative;
+      top: 0;
+      margin: 0 10px;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: #EFEFEF;
+      background-color: #DD4A68;
+      transition: background-color 0.3s ease;
+    }
+
+
+    #server-buttons a:hover {
+      background-color: #FF6B88;
+    }
+
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #1f1f1f;
+      z-index: 9999;
+      user-select: none;
+    }
+
+    #loader.hide {
+      animation: fadeOut 1s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    #loader h1 {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 7vw;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    #loader h1 span {
+      color: #ff0006;
+    }
+
+    #loader p {
+      position: absolute;
+      top: 53%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 1.2vw;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    #loader .loader {
+      position: absolute;
+      top: 63%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 6vw;
+      height: 6vw;
+      border-radius: 50%;
+      border: 10px solid #fff;
+      border-top-color: #941417;
+      animation: loader 1s linear infinite;
+    }
+
+    .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 94.9%;
+            left:0;
+            right:0;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            height:50px;
+            background-color: var(--navbar);
+            color: white;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+        .navbar:hover {
+            transform: translateY(-30px);
+        }
+        .navbar .icon {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .icon img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .navbar .title {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .navbar .buttons {
+            display: flex;
+            align-items: center;
+            justify-content:center;
+        }
+        .navbar .buttons .btn {
+            width: 30px;
+            height: 30px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px;
+        }
+        @media screen and (max-width: 768px) {
+            .navbar .title {
+                font-size: 1em;
+            }
+            .navbar .icon img {
+                width: 30px;
+                height: 30px;
+            }
+            .navbar .buttons .btn {
+                width: 25px;
+                height: 25px;
+            }
+        }
+  </style>
+</head>
+
+<body theme="classic">
+  <div id="page-container">
+    <div class="content">
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({ pageLanguage: "en", layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, "google_translate_element");
+    }
+  </script>
+
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <center>
+    <p style="font-size:10px;">If it gives a 404 issue, press the reload button on the hover menu!</p>
+    <p style="font-size:10px;">(if it gives you the option, press register proxy twice)</p>
+  </center>
+  <br>
+  <div id="game-container" style="border-radius: 20px; background: transparent; height: 600px; margin-bottom:50px;">
+    <div class="iframe">
+      <iframe class="abc" id="gameFramey"></iframe>
+      <br>
+    </div>
+    <br>
+    <div class="navbar">
+      <div class="icon">
+          <a href="/english/"><img src="/assets/images/jmw.png" alt="Icon"></a>
+      </div>
+      <div class="buttons">
+        <a style="color: var(--txtcolor); background: transparent; text-decoration: none; font-size: 30px;  margin: 0px 10px;" href="/english/"><i class="fa-solid fa-angle-left"></i> Back</a>
+        <button onclick="reload()" style="background: transparent; width: 50px; right: 0;   margin: 0px 10px;" class="reload"><i class="fa-solid fa-rotate-right"></i></button>
+      <button onclick="toggleFullscreen()" style="background: transparent; width: 50px; right: 0;  margin: 0px 10px;" class="fullscreen"><i class="fa-solid fa-expand"></i></button>
+      <button onclick="window.open('/record.html');" style="background: transparent; width: 50px; right: 0;  margin: 0px 10px;" class="fullscreen"><i class="fa-solid fa-camera"></i></button>
+      </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  <script>
+    setTimeout(() => {
+      const szLink = document.getElementById('szLink');
+      if (szLink) {
+        szLink.style.opacity = '0';
+        setTimeout(() => szLink.style.display = 'none', 300);
+      }
+    }, 6000);
+  </script>     
+<script src="/assets/scripts/fade.js"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const file = urlParams.get('book');
+    const type = urlParams.get('type')
+    if (type == "swf") {
+      document.getElementById('gameFramey').src = 'https://binbashbanana.github.io/gfiles/gfiles/flash/?swf=' + file
+    }
+    else {
+      document.getElementById('gameFramey').src = "https://cdn.galacticnetwork.org/galacticnetwork/gfiles/master/gfiles/html5/" + file + '/index.html'
+    }
+  </script>
+  <script>
+    function toggleFullscreen() {
+      let elem = document.querySelector('.abc');
+
+      if (!document.fullscreenElement) {
+        elem.requestFullscreen().catch((err) => {
+          alert(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
+        });
+      } else {
+        document.exitFullscreen();
+      }
+    }
+    function toggleFullscreen() {
+      let elem = document.querySelector('.abc');
+
+      if (!document.fullscreenElement) {
+        elem.requestFullscreen().catch((err) => {
+          alert(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
+        });
+      } else {
+        document.exitFullscreen();
+      }
+    }
+  </script>
+  <script>
+    function reload() {
+      var web = document.getElementById("gameFramey");
+      web.contentWindow.location.reload();
+      //web.src += ""
+    }
+  </script>
+</body>
+<script src="/assets/scripts/s1.js"></script>
+<script src="/assets/scripts/s2.js"></script>
+<script src="/assets/scripts/index.js"></script>
+<script src="/assets/scripts/themes.js"></script>
+<script src="/assets/scripts/panic.js"></script>
+<script src="/assets/scripts/rc.js"></script>
+<script src="/assets/scripts/2auto.js"></script>
+</html>

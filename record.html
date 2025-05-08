@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan's Math Work - Refrence</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQ8CVXYBF9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'G-TQ8CVXYBF9');
+    </script>
+      <meta name="Jordansmathwork">
+    <meta content="Jordansmathwork" property="og:title">
+    <meta content="Jordan's math work is a comprehensive educational platform designed to help students master various mathematical concepts. With a user-friendly interface, it offers a wide range of resources, including video tutorials, interactive practice problems, and detailed explanations. Jordan, an experienced math tutor and educator, provides clear and concise lessons that break down complex concepts into manageable steps. The platform also offers personalized learning tools, allowing students to track their progress and identify areas for improvement. Overall, Jordansmathwork offers a dynamic and engaging learning experience for students of all levels." property="og:description">
+      <link rel="icon" href="/assets/images/jmw.png" />
+      <link rel="shortcut icon" href="/assets/images/jmw.png" />
+      <link rel="manifest" href="/manifest.json"/>
+      <link rel="stylesheet" href="/assets/css/main.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+</head>
+<body>
+    <div align="center">
+        <h1>Recorder</h1>
+        <button id="recordButton">Start Recording</button>
+        <p id="statusMessage"></p>
+        <script>
+          let mediaRecorder;
+          let recordedChunks = [];
+      
+          async function checkBrowserSupport() {
+            const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+            const supportsMediaRecorder = 'MediaRecorder' in window;
+            const supportsDisplayMedia = 'getDisplayMedia' in navigator.mediaDevices;
+      
+            if (isSafari && (!supportsMediaRecorder || !supportsDisplayMedia)) {
+              document.getElementById('statusMessage').textContent = 'This feature does not work on mobile.';
+              document.getElementById('recordButton').textContent = 'Screen Recording Unavailable';
+              document.getElementById('recordButton').disabled = true;
+              return false;
+            }
+      
+            return true;
+          }
+      
+          document.getElementById('recordButton').addEventListener('click', async function () {
+            const supported = await checkBrowserSupport();
+            if (!supported) return;
+      
+            if (!mediaRecorder || mediaRecorder.state === 'inactive') {
+              try {
+                const stream = await navigator.mediaDevices.getDisplayMedia({ video: true });
+                mediaRecorder = new MediaRecorder(stream);
+      
+                mediaRecorder.ondataavailable = function (event) {
+                  if (event.data.size > 0) {
+                    recordedChunks.push(event.data);
+                  }
+                };
+      
+                mediaRecorder.onstop = function () {
+                  const blob = new Blob(recordedChunks, { type: 'video/webm' });
+                  const url = URL.createObjectURL(blob);
+                  const a = document.createElement('a');
+                  const currentDate = new Date();
+                  const dateTime = currentDate.toISOString().replace(/:/g, '-').split('.')[0];
+                  a.href = url;
+                  a.download = `jmw_${dateTime}.webm`;
+                  a.click();
+                  URL.revokeObjectURL(url);
+                  recordedChunks = [];
+                };
+      
+                mediaRecorder.start();
+                this.textContent = 'Stop Recording';
+              } catch (error) {
+                document.getElementById('statusMessage').textContent = 'Error starting recording: ' + error.message;
+              }
+            } else if (mediaRecorder.state === 'recording') {
+              mediaRecorder.stop();
+              this.textContent = 'Start Recording';
+            }
+          });
+      
+          checkBrowserSupport();
+        </script>
+    </div>
+</body>
+<script src="/assets/scripts/s1.js"></script>
+<script src="/assets/scripts/s2.js"></script>
+<script src="/assets/scripts/index.js"></script>
+<script src="/assets/scripts/themes.js"></script>
+<script src="/assets/scripts/panic.js"></script>
+<script src="/assets/scripts/fade.js"></script>
+<script src="/assets/scripts/autoplay.js"></script>
+<script src="/assets/scripts/rc.js"></script>
+<script src="/assets/scripts/hider.js"></script>
+<script src="/assets/scripts/2auto.js"></script>
+</html>

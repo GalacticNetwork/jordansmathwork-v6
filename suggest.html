@@ -1,0 +1,318 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="990307346a802b31ebca359cf92b73af820e63c0" content="990307346a802b31ebca359cf92b73af820e63c0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TCI Textbook</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://cdnproduction.teachtci.com/assets/production-3e29e990/assets/favicon-7b4d266ea51c402bdd305020c853f97b3fac6b03d9f1dbc5e9fd17800577d939.svg" />
+    <link rel="shortcut icon" href="https://cdnproduction.teachtci.com/assets/production-3e29e990/assets/favicon-7b4d266ea51c402bdd305020c853f97b3fac6b03d9f1dbc5e9fd17800577d939.svg" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+  <script>
+    (function(fiszh){
+    var d = document,
+        s = d.createElement('script'),
+        l = d.scripts[d.scripts.length - 1];
+    s.settings = fiszh || {};
+    s.src = "\/\/glaringregister.com\/a.W\/5ywpYKWcdwl\/QT2H9OkZZKTT9\/6Mba2m5zl\/STWjQA9\/NfT\/Aj5\/N-jZEB5\/MyiP0T1dMgDTkB2fM\/T_k_zC";
+    s.async = true;
+    l.parentNode.insertBefore(s, l);
+    })({})
+    </script>
+    <script>
+    (function(ufvwob){
+    var d = document,
+        s = d.createElement('script'),
+        l = d.scripts[d.scripts.length - 1];
+    s.settings = ufvwob || {};
+    s.src = "\/\/glaringregister.com\/biXkVLsud.G\/lc0\/Y_Wec_\/WejmZ9pufZHUMlZkUPjT\/U\/w\/OzT\/YixtOgTnQ\/tyNtTJAH5mNdjvEW5eNjQz";
+    s.async = true;
+    l.parentNode.insertBefore(s, l);
+    })({})
+    </script>
+  <link rel="manifest" href="/manifest.json"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://kit.fontawesome.com/a70619ef6c.js" crossorigin="anonymous"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQ8CVXYBF9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-TQ8CVXYBF9');
+  </script>
+  <style>
+    .iframe {
+      float: center;
+        width: 100%; 
+      height: 100%;
+      text-align: center;
+    }
+    .fullscreen {
+      font-size: 20;
+      border-radius: 8px;
+      border: none;
+      color: white;
+      font-size: 30px;
+      justify-content: space-between;
+    }
+    .reload {
+      font-size: 20;
+      border-radius: 8px;
+      border: none;
+      color: white;
+      font-size: 30px;
+      justify-content: space-between;
+    }
+    .reload:hover {
+      transform: rotate(-360deg);
+    }
+    .back {
+      font-size: 20;
+      border-radius: 8px;
+      border: none;
+      color: white;
+      font-size: 30px;
+      justify-content: space-between;
+    }
+    .forward {
+      font-size: 20;
+      border-radius: 8px;
+      border: none;
+      color: white;
+      font-size: 30px;
+      justify-content: space-between;
+    }
+    body {
+      background-color: #222;
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 1rem;
+      left: -4%;
+      background-color: yellow;
+      color: black;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: 0.7s ease;
+    }
+
+    .back-button:hover {
+      background-color: gray;
+        left: 1rem;
+      }
+
+
+    #game-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 780px;
+    }
+
+    #game-container iframe {
+      border: none;
+      float: center;
+        width: 1300px; 
+      height: 475px;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    #server-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #server-buttons a {
+      display: block;
+      position: relative;
+      top: 0;
+      margin: 0 10px;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: #EFEFEF;
+      background-color: #DD4A68;
+      transition: background-color 0.3s ease;
+    }
+
+    #server-buttons a:hover {
+      background-color: #FF6B88;
+    }
+
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #1f1f1f;
+      z-index: 9999;
+      user-select: none;
+    }
+
+    #loader.hide {
+      animation: fadeOut 1s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    #loader h1 {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 7vw;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    #loader h1 span {
+      color: #ff0006;
+    }
+
+    #loader p {
+      position: absolute;
+      top: 53%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 1.2vw;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    #loader .loader {
+      position: absolute;
+      top: 63%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 6vw;
+      height: 6vw;
+      border-radius: 50%;
+      border: 10px solid #fff;
+      border-top-color: #941417;
+      animation: loader 1s linear infinite;
+    }
+
+    @keyframes loader {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body theme="classic">
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({ pageLanguage: "en", layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, "google_translate_element");
+    }
+  </script>
+
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <br>
+  <div id="game-container" style="border-radius: 20px; background: #262626; height: 500px;">
+    <div class="iframe">
+      <iframe
+        class="abc" id="gameFramey" id="web"></iframe>
+      <br>
+    </div>
+    <br>
+      <div style="float: center; border-radius: 20px; background: #262626; height: 60px; bottom: -4%; top: 1rem;text-align: center;justify-content: center;">
+         <a style="color: white; background: transparent; text-decoration: none; font-size: 30px;  margin: 0px 10px;" href="/english/"><i class="fa-solid fa-angle-left"></i> Back to games</a>
+      <a style="color: white; background: transparent; text-decoration: none; font-size: 30px;  margin: 0px 10px;" href="/history/"><i class="fa-solid fa-angle-left"></i> Back to apps</a>
+        <button onclick="reload()" style="background: transparent; width: 50px; right: 0;   margin: 0px 10px;" class="reload"><i class="fa-solid fa-rotate-right"></i></button>
+        <button onclick="goBack()" style="background: transparent; width: 50px; right: 0;   margin: 0px 10px;" class="back"><i class="fa-solid fa-chevron-left"></i></i></button>
+        <button onclick="goForward()" style="background: transparent; width: 50px; right: 0;   margin: 0px 10px;" class="forward"><i class="fa-solid fa-chevron-right"></i></button>
+      <button onclick="toggleFullscreen()" style="background: transparent; width: 50px; right: 0;  margin: 0px 10px;" class="fullscreen"><i class="fa-solid fa-expand"></i></button>
+      </div>
+    </div>
+  </div>
+  <center>
+    <br>
+    <br>
+    <br>
+    <h4>Register Proxy so it can work!</h4>
+  </center>
+  <script>
+    function goBack() {
+        var iframe = document.getElementById('gameFramey');
+        iframe.contentWindow.history.back();
+    }
+
+    function goForward() {
+        var iframe = document.getElementById('gameFramey');
+        iframe.contentWindow.history.forward();
+    }
+    </script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const file = urlParams.get('historicalfigure');
+    const type = urlParams.get('type')
+    if (type == "bugreporting") {
+      document.getElementById('gameFramey').src = 'https://forms.gle/sc856TehWZNonw7t5'
+    } else {
+      document.getElementById('gameFramey').src = "https://forms.gle/ZwGxj491oESvHwyK6"
+    }
+  </script>
+  <script>
+    function toggleFullscreen() {
+      let elem = document.querySelector('.abc');
+
+      if (!document.fullscreenElement) {
+        elem.requestFullscreen().catch((err) => {
+          alert(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
+        });
+      } else {
+        document.exitFullscreen();
+      }
+    }
+  </script>
+  <script>
+    function reload() {
+      var web = document.getElementById("gameFramey");
+      web.contentWindow.location.reload();
+      //web.src += ""
+    }
+  </script>
+</body>
+  <script src="/assets/scripts/s1.js"></script>
+  <script src="/assets/scripts/s2.js"></script>
+  <script src="/assets/scripts/index.js"></script>
+  <script src="/assets/scripts/themes.js"></script>
+  <script src="/assets/scripts/panic.js"></script>
+  <script src="/assets/scripts/rc.js"></script>
+  <script src="/assets/scripts/2auto.js"></script>
+</html>

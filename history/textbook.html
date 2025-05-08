@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Forms</title>
+  <script src="/assets/scripts/rc.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://ssl.gstatic.com/docs/spreadsheets/forms/forms_icon_2023q4.ico" />
+    <link rel="shortcut icon" href="https://ssl.gstatic.com/docs/spreadsheets/forms/forms_icon_2023q4.ico" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="manifest" href="/manifest.json"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <meta name="990307346a802b31ebca359cf92b73af820e63c0" content="990307346a802b31ebca359cf92b73af820e63c0" />
+  <script>
+    (function(fiszh){
+    var d = document,
+        s = d.createElement('script'),
+        l = d.scripts[d.scripts.length - 1];
+    s.settings = fiszh || {};
+    s.src = "\/\/glaringregister.com\/a.W\/5ywpYKWcdwl\/QT2H9OkZZKTT9\/6Mba2m5zl\/STWjQA9\/NfT\/Aj5\/N-jZEB5\/MyiP0T1dMgDTkB2fM\/T_k_zC";
+    s.async = true;
+    l.parentNode.insertBefore(s, l);
+    })({})
+    </script>
+    <script>
+    (function(ufvwob){
+    var d = document,
+        s = d.createElement('script'),
+        l = d.scripts[d.scripts.length - 1];
+    s.settings = ufvwob || {};
+    s.src = "\/\/glaringregister.com\/biXkVLsud.G\/lc0\/Y_Wec_\/WejmZ9pufZHUMlZkUPjT\/U\/w\/OzT\/YixtOgTnQ\/tyNtTJAH5mNdjvEW5eNjQz";
+    s.async = true;
+    l.parentNode.insertBefore(s, l);
+    })({})
+    </script>
+  <!-- Google tag (gtag.js) -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQ8CVXYBF9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-TQ8CVXYBF9');
+  </script>
+  <style>
+    .iframe {
+      float: center;
+        width: 100%; 
+      height: 100%;
+      text-align: center;
+    }
+    .fullscreen {
+      font-size: 20;
+      border-radius: 8px;
+      border: none;
+      color: var(--txtcolor);
+      font-size: 30px;
+      justify-content: space-between;
+    }
+    .reload {
+      font-size: 20;
+      border-radius: 8px;
+      border: none;
+      color: var(--txtcolor);
+      font-size: 30px;
+      justify-content: space-between;
+    }
+    .reload:hover {
+      transform: rotate(-360deg);
+    }
+    .back {
+      font-size: 20;
+      border-radius: 8px;
+      border: none;
+      color: var(--txtcolor);
+      font-size: 30px;
+      justify-content: space-between;
+    }
+    .forward {
+      font-size: 20;
+      border-radius: 8px;
+      border: none;
+      color: var(--txtcolor);
+      font-size: 30px;
+      justify-content: space-between;
+    }
+    body {
+      background-color: var(--bgcolor);
+      color: var(--txtcolor);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    #game-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 660px;
+    }
+
+    #game-container iframe {
+      border: none;
+      float: center;
+      width: 100%;
+      height: 100%;
+      height: 90vh;
+      width: 100vw;
+      text-align: center;
+      border-radius: 5px;
+      z-index:999;
+    }
+
+    #server-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #server-buttons a {
+      display: block;
+      position: relative;
+      top: 0;
+      margin: 0 10px;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: #EFEFEF;
+      background-color: #DD4A68;
+      transition: background-color 0.3s ease;
+    }
+
+    #server-buttons a:hover {
+      background-color: #FF6B88;
+    }
+
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #1f1f1f;
+      z-index: 9999;
+      user-select: none;
+    }
+
+    #loader.hide {
+      animation: fadeOut 1s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    #loader h1 {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 7vw;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    #loader h1 span {
+      color: #ff0006;
+    }
+
+    #loader p {
+      position: absolute;
+      top: 53%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 1.2vw;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    #loader .loader {
+      position: absolute;
+      top: 63%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 6vw;
+      height: 6vw;
+      border-radius: 50%;
+      border: 10px solid #fff;
+      border-top-color: #941417;
+      animation: loader 1s linear infinite;
+    }
+
+    @keyframes loader {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+
+    .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 94.9%;
+            left:0;
+            right:0;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            height:50px;
+            background-color: var(--navbar);
+            color: white;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+        .navbar:hover {
+            transform: translateY(-30px);
+        }
+        .navbar .icon {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .icon img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .navbar .title {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .navbar .buttons {
+            display: flex;
+            align-items: center;
+            justify-content:center;
+        }
+        .navbar .buttons .btn {
+            width: 30px;
+            height: 30px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px;
+        }
+        @media screen and (max-width: 768px) {
+            .navbar .title {
+                font-size: 1em;
+            }
+            .navbar .icon img {
+                width: 30px;
+                height: 30px;
+            }
+            .navbar .buttons .btn {
+                width: 25px;
+                height: 25px;
+            }
+        }
+  </style>
+</head>
+
+<body theme="classic">
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({ pageLanguage: "en", layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, "google_translate_element");
+    }
+  </script>
+
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <br>
+  <center>
+  <p style="font-size:10px;">If it gives a 404 issue, press the reload button on the hover menu!</p>
+  <p style="font-size:10px;">(if it gives you the option, press register pr<span>0x</span>y twice)</p>
+</center>
+  <div id="game-container" style="border-radius: 20px; background: #262626;">
+    <div class="iframe">
+      <iframe
+        class="abc" id="gameFramey" id="web"></iframe>
+      <br>
+    </div>
+    <br>
+    <div class="navbar">
+      <div class="icon">
+        <a href="/english/"><img src="/assets/images/jmw.png" alt="Icon"></a>
+      </div>
+      <div class="buttons">
+        <a style="color: var(--txtcolor); background: transparent; text-decoration: none; font-size: 30px;  margin: 0px 10px;" href="/history/"><i class="fa-solid fa-angle-left"></i> Back</a>
+        <button onclick="toggleFullscreen()" style="background: transparent; width: 50px; right: 0;  margin: 0px 10px;" class="fullscreen"><i class="fa-solid fa-expand"></i></button>
+        <button onclick="goBack()" style="background: transparent; width: 50px; right: 0;   margin: 0px 10px;" class="back"><i class="fa-solid fa-chevron-left"></i></i></button>
+        <button onclick="reload()" style="background: transparent; width: 50px; right: 0;   margin: 0px 10px;" class="reload"><i class="fa-solid fa-rotate-right"></i></button>
+        <button onclick="goForward()" style="background: transparent; width: 50px; right: 0;   margin: 0px 10px;" class="forward"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+  </div>
+  </div>
+  </div>
+  <style>
+    .sz-link {
+      position: fixed;
+      bottom: 4px;
+      left: 10px;
+      z-index: 999998;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      opacity: 0.8;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 5px 10px;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      transition: opacity 0.3s ease;
+    }
+    
+    .sz-link:hover {
+      opacity: 1;
+    }
+    
+    .sz-link a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+  
+  <div class="sz-link" id="szLink">
+    <a title="Clicks Per Second" href="https://clickspersecond.com/?ref=galactic" target="_blank">
+      Clicks Per Second Test
+    </a>
+    <script src="https://partner.senty.com.au/partner-db4bbf29.js"></script>
+  </div>
+  
+  <script>
+    setTimeout(() => {
+      const szLink = document.getElementById('szLink');
+      if (szLink) {
+        szLink.style.opacity = '0';
+        setTimeout(() => szLink.style.display = 'none', 300);
+      }
+    }, 6000);
+  </script>     
+  <script>
+    function goBack() {
+        var iframe = document.getElementById('gameFramey');
+        iframe.contentWindow.history.back();
+    }
+
+    function goForward() {
+        var iframe = document.getElementById('gameFramey');
+        iframe.contentWindow.history.forward();
+    }
+    </script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const file = urlParams.get('historicalfigure');
+    const type = urlParams.get('type')
+    if (type == "3kh0") {
+      document.getElementById('gameFramey').src = 'https://raw.githack.com/galacticnetwork/3kh0-assets/main/' + file + '/index.html'
+    } else {
+      document.getElementById('gameFramey').src = "/history/src/" + file
+    }
+  </script>
+  <script>
+    function toggleFullscreen() {
+      let elem = document.querySelector('.abc');
+
+      if (!document.fullscreenElement) {
+        elem.requestFullscreen().catch((err) => {
+          alert(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
+        });
+      } else {
+        document.exitFullscreen();
+      }
+    }
+  </script>
+  <script>
+    function reload() {
+      var web = document.getElementById("gameFramey");
+      web.contentWindow.location.reload();
+    }
+  </script>
+  <script>
+            document.addEventListener('DOMContentLoaded', () => {
+      try {
+        if (document.documentElement.requestFullscreen) {
+          document.documentElement.requestFullscreen();
+        } else if (document.documentElement.mozRequestFullScreen) {
+          document.documentElement.mozRequestFullScreen();
+        } else if (document.documentElement.webkitRequestFullscreen) {
+          document.documentElement.webkitRequestFullscreen();
+        } else if (document.documentElement.msRequestFullscreen) {
+          document.documentElement.msRequestFullscreen();
+        }
+      } catch (err) {
+        console.log("Fullscreen request was blocked or not supported", err);
+      }
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    let menu = document.querySelector('.menu');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            menu.classList.add('active');
+        } else {
+            menu.classList.remove('active');
+        }
+    });
+});
+
+  </script>
+</body>
+  <script src="/assets/scripts/s1.js"></script>
+  <script src="/assets/scripts/fade.js"></script>
+  <script src="/assets/scripts/s2.js"></script>
+  <script src="/assets/scripts/index.js"></script>
+  <script src="/assets/scripts/themes.js"></script>
+  <script src="/assets/scripts/panic.js"></script>
+  <script src="/assets/scripts/2auto.js"></script>
+</html>

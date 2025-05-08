@@ -1,0 +1,125 @@
+body[theme="classic"] {
+  --bgcolor: #222;
+  --navbar: #30303062;
+  --txtcolor: #adad43;
+}
+
+body[theme="light"] {
+  --bgcolor: gray;
+  --navbar: #a1a1a162;
+  --txtcolor: black;
+}
+body[theme="cornhub"] {
+  --bgcolor: black;
+  --navbar: #6e2d1162;
+  --txtcolor: orange;
+}
+body[theme="midnight"] {
+  --bgcolor: rgb(4, 24, 56);
+  --navbar: #00004262;
+  --txtcolor: black;
+}
+body[theme="legacyv5"] {
+  --bgcolor: #333;
+  --navbar: rgba(0, 0, 0, 0.473);
+  --txtcolor: white;
+}
+body[theme="legacyv4"] {
+  --bgcolor: #1a1a1a;
+  --navbar: #26262662;
+  --txtcolor: yellow;
+}
+body[theme="discord"] {
+  --bgcolor: #36393F;
+  --navbar: #8992fb62;
+  --txtcolor: #5865F2;
+}
+body[theme="incognito"] {
+  --bgcolor: #161923;
+  --navbar: #04432162;
+  --txtcolor: #3cb371;
+}
+body[theme="cosmic"] {
+  --bgcolor: #282834;
+  --navbar: #0e01c662;
+  --txtcolor: #082f59;
+}
+body[theme="cherry"] {
+  --bgcolor: #d37979;
+  --navbar: #df62be62;
+  --txtcolor: #240017;
+}
+body[theme="ocean"] {
+  --bgcolor: #7fcdff;
+  --navbar: #06427362;
+  --txtcolor: gray;
+}
+body[theme="3kh0"] {
+  --bgcolor: #1c1c1c;
+  --navbar: #9fd39c62;
+  --txtcolor: #4caf50;
+}
+body[theme="rogue"] {
+  --bgcolor: #D04343;
+  --navbar: #D0434362;
+  --txtcolor: #310707;
+}
+body[theme="blooket"] {
+  --bgcolor: #0dc2cf;
+  --navbar: #ce0db462;
+  --txtcolor: #9a49aa;
+}
+body[theme="kahoot"] {
+  --bgcolor: #46178f;
+  --navbar: #29203762;
+  --txtcolor: #786d88;
+}
+body[theme="versatile"] {
+  --bgcolor: black;
+  --navbar: #26262662;
+  --txtcolor: #d7cccc;
+}
+body[theme="plexile"] {
+  --bgcolor: #0F0F0F;
+  --navbar: #16181c62;
+  --txtcolor: #b03232;
+}
+body[theme="blueblack"] {
+  background: url(https://iili.io/dk1mX8x.jpg);
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  --navbar: rgba(0, 0, 0, 0.305);
+  --txtcolor: #d7cccc;
+  --color2:white;
+}
+body[theme="redblack"] {
+  background: url(https://iili.io/JWt6ZTx.png);
+  --navbar: #57000062;
+  --txtcolor: #8f8f8f;
+}
+body[theme="greenpink"] {
+  background: url(https://iili.io/JWtPIvs.png);
+  --navbar: #78075a62;
+  --txtcolor: pink;
+}
+body[theme="blackteal"] {
+  background: url(https://iili.io/JWtPgwv.png);
+  --navbar: #0076a862;
+  --txtcolor: #00ffcc;
+}
+
+body[theme="rickroll"] {
+  background: url('/getrickrolled.gif');
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  --navbar:black;
+  --txtcolor:#C2A49C;
+}

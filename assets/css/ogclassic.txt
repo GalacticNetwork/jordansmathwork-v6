@@ -1,0 +1,13 @@
+body[theme="classic"] {
+  --bgcolor: #222;
+  --navbar: #30303062;
+  --txtcolor: #adad43;
+}
+
+    const texts = [
+    "have nostalgia.",
+    "play games.",
+    "have fun.",
+    "be entertained.",
+    "search anything."
+];
