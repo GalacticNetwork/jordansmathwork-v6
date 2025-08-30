@@ -1,6 +1,6 @@
 self.__uv$config = {
   prefix: '/static/jordansmath/work/',
-  bare: 'https://petezahserver.faizinternational.com.np/bare/',
+  bare: 'https://v4.mathsjunction.in/tspmo/',
   encodeUrl: Ultraviolet.codec.xor.encode,
   decodeUrl: Ultraviolet.codec.xor.decode,
   handler: '/static/jmw/jmw.handler.js',
